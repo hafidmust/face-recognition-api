@@ -10,7 +10,7 @@ const profiles = require('./controllers/profiles')
 const db = knex({
     client: 'pg',
     connection: {
-        connectString: 'postgresql-graceful-46731',
+        connectString: process.env.DATABASE_URL,
         ssl: true
     }
 });
